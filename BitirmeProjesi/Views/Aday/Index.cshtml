@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "ADAYLAR";
+    
+}
+
+<h2>ADAYLAR</h2>
+
+
+@using BitirmeProjesi.Data.UnitOfWork;
+@model List<BitirmeProjesi.Data.Model.Aday>
+<h2>ADAYLAR</h2>
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Aday Id</th>
+            <th>Aday Adı</th>
+            <th>Aday Soyadı</th>
+            <th>Aday Parti</th>
+            <th>Aday Seçim</th>
+            <th>Aday TC</th>
+            <th>Aday Doğum Tarihi</th>
+            @*<th>İlçe</th>*@
+            <th>Aday Yetki</th>
+            <th>Aday Oy Durumu </th>
+            @*<th>Güncelle</th>
+            <th>Sil</th>*@
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aday in Model)
+        {
+            <tr>
+                <td>@aday.AdayId</td>
+                <td>@aday.Kullanici.KullaniciAdi</td>
+                <td>@aday.Kullanici.KullaniciSoyadi</td>
+                <td>@aday.AdayParti</td>
+                <td>@aday.SecimId</td>
+                <td>@aday.Kullanici.KullaniciTc</td>
+                <td>@aday.Kullanici.KullaniciDogumTarihi.ToString("dddd, dd MMMM yyyy")</td>
+                <td>@aday.Kullanici.KullaniciYetki</td>
+                <td>@aday.Kullanici.KullaniciOyDurumu</td>
+                @*<td><a href="@Url.Action("Guncelle", "Aday", new { adayId = aday.AdayId})" class="guncelle btn btn-custom">Güncelle</a></td>
+                <td><button class="adaysil btn btn-danger" value="@aday.AdayId">Sil</button></td>*@
+            </tr>
+        }
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <<th>Aday Id</th>
+            <th>Aday Adı</th>
+            <th>Aday Soyadı</th>
+            <th>Aday Parti</th>
+            <th>Aday Seçim</th>
+            <th>Aday TC</th>
+            <th>Aday Doğum Tarihi</th>
+            @*<th>İlçe</th>*@
+            <th>Aday Yetki</th>
+            <th>Aday Oy Durumu </th>
+            @*<th>Güncelle</th>
+            <th>Sil</th>*@
+        </tr>
+    </tfoot>
+</table>
+

@@ -1,0 +1,6 @@
+C:\Users\dell\Desktop\BitirmeProjesi\BitirmeProjesi.Data.Model\bin\Debug\BitirmeProjesi.Data.Model.dll
+C:\Users\dell\Desktop\BitirmeProjesi\BitirmeProjesi.Data.Model\bin\Debug\BitirmeProjesi.Data.Model.pdb
+C:\Users\dell\Desktop\BitirmeProjesi\BitirmeProjesi.Data.Model\obj\Debug\BitirmeProjesi.Data.Model.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\BitirmeProjesi\BitirmeProjesi.Data.Model\obj\Debug\BitirmeProjesi.Data.Model.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\BitirmeProjesi\BitirmeProjesi.Data.Model\obj\Debug\BitirmeProjesi.Data.Model.dll
+C:\Users\dell\Desktop\BitirmeProjesi\BitirmeProjesi.Data.Model\obj\Debug\BitirmeProjesi.Data.Model.pdb

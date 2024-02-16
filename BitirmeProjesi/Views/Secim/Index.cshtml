@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Seçimler";
+}
+
+@using BitirmeProjesi.Data.UnitOfWork;
+@model List<BitirmeProjesi.Data.Model.Secim>
+<h2>SEÇİMLER</h2>
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Seçim Id</th>
+            <th>Seçim Adı</th>
+            <th>Seçim Başlama Tarihi</th>
+            <th>Seçim Bitiş Tarihi</th>
+            @*<th>Güncelle</th>
+            <th>Sil</th>*@
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var scm in Model)
+            {
+                <tr>
+                    <td>@scm.SecimId</td>
+                    <td>@scm.SecimAdi</td>
+                    <td>@scm.SecimBaslangic.ToString("dddd, dd MMMM yyyy")</td>
+                    <td>@scm.SecimBitis.ToString("dddd, dd MMMM yyyy")</td>
+                    @*<td><button class="guncelle btn btn-custom" value="@scm.SecimId">Güncelle</button></td>
+                    <td><button class="sil btn btn-danger" value="@scm.SecimId">Sil</button></td>*@
+                    
+                </tr>
+            }
+        
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Seçim Id</th>
+            <th>Seçim Adı</th>
+            <th>Seçim Başlama Tarihi</th>
+            <th>Seçim Bitiş Tarihi</th>
+            @*<th>Güncelle</th>
+            <th>Sil</th>*@
+        </tr>
+    </tfoot>
+</table>
+

@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = " Seçim Ekle";
+}
+
+<h2>SEÇİM EKLE</h2>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-md-12">Seçim Adı</label>
+            <div class="col-md-12">
+                <input id="secimAd" type="text" class="form-control" placeholder="Seçim Adını Giriniz">
+            </div>
+            @*<select id="secimler"class="form-control">
+                    @foreach (var secim in ViewBag.Secimler)
+                    {
+                        <option data-id="@secim.SecimId">@secim.SecimAdi</option>
+                    }
+                </select>*@
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="white-box">
+                    <h3 class="box-title m-b-0"><b>Seçim Tarih Belirleme</b></h3>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="example">
+                                <h5 class="box-title m-t-30">Başlangıç Tarihi</h5>
+                                <input id="baslangicTarihi" class="form-control input-daterange-datepicker" type="text" name="daterange" placeholder="Seçim Başlangıç Tarihini Giriniz" />
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-4">
+                            <div class="example">
+                                <h5 class="box-title m-t-30">Bitiş Tarihi</h5>
+                                <input id="bitisTarihi" type="text" class="form-control input-daterange-timepicker" name="daterange" placeholder="Seçim Bitiş Tarihini Giriniz" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            @*<div class="col-md-12">
+                    <input type ="button" id="secimKaydet" class="btn btn-block btn-info" value="Kaydet"/>
+                </div>*@
+            <div class="col-md-12">
+                @*<input type="submit" id="secimKaydet" class="btn btn-primary" value="Kaydet" />*@
+                <button id="secimKaydet" class="btn btn-block btn-info">Kaydet</button>
+            </div>
+        </div>
+    </form>

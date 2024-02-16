@@ -1,0 +1,65 @@
+﻿
+@*@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>*@
+
+
+@{
+    ViewBag.Title = "Kullanıcılar";
+}
+
+@using BitirmeProjesi.Data.UnitOfWork;
+@model List<BitirmeProjesi.Data.Model.Kullanicilar>
+<h2>KULLANICILAR</h2>
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Kullanıcı Id</th>
+            <th>Kullanıcı Adı</th>
+            <th>Kullanıcı Soyadı</th>
+            <th>Kullanıcı TC</th>
+            <th>Kullanıcı Doğum Tarihi</th>
+            @*<th>İlçe</th>*@
+            <th>Kullanıcı Yetki</th>
+            <th>Kullanıcı Oy Durumu </th>
+            @*<th>Güncelle</th>
+            <th>Sil</th>*@
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kullanici in Model)
+        {
+            <tr>
+                <td>@kullanici.KullaniciId</td>
+                <td>@kullanici.KullaniciAdi</td>
+                <td>@kullanici.KullaniciSoyadi</td>
+                <td>@kullanici.KullaniciTc</td>
+                <td>@kullanici.KullaniciDogumTarihi.ToString("dddd, dd MMMM yyyy")</td>
+                @*<td>@kullanici.Ilce</td>*@
+                <td>@kullanici.KullaniciYetki</td>
+                <td>@kullanici.KullaniciOyDurumu</td>
+                @*<td><a href="@Url.Action("Guncelle", "Kullanici", new { kullaniciId = kullanici.KullaniciId})" class="guncelle btn btn-custom">Güncelle</a></td>
+                <td><button class="kullanicisil btn btn-danger" value="@kullanici.KullaniciId">Sil</button></td>*@
+            </tr>
+        }
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Kullanıcı Id</th>
+            <th>Kullanıcı Adı</th>
+            <th>Kullanıcı Soyadı</th>
+            <th>Kullanıcı TC</th>
+            <th>Kullanıcı Doğum Tarihi</th>
+            @*<th>İlçe</th>*@
+            <th>Kullanıcı Yetki</th>
+            <th>Kullanıcı Oy Durumu </th>
+            @*<th>Güncelle</th>
+            <th>Sil</th>*@
+        </tr>
+    </tfoot>
+</table>
+

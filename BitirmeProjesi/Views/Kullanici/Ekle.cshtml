@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Kullanıcı Ekle";
+}
+
+<h2>Kullanıcı Ekle</h2>
+
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-12">Kullanıcı Adı</label>
+        <div class="col-md-12">
+            <input id="kullaniciAd" type="text" class="form-control" placeholder="Kullanıcı Adını Giriniz">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Kullanıcı Soyadı</label>
+        <div class="col-md-12">
+            <input id="kullaniciSoyad" type="text" class="form-control" placeholder="Kullanıcı Soyadını Giriniz">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Kullanıcı TC</label>
+        <div class="col-md-12">
+            <input id="kullaniciTc" type="text" class="form-control" placeholder="Kullanıcı TC Giriniz">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Kullanıcı Doğum Tarihi</label>
+        <input id="kullaniciDogum" type="text" class="form-control input-daterange-timepicker" name="daterange" placeholder="Kullanıcı Doğum Tarihini Girinizz">
+
+    </div>
+    @*<div class="form-group">
+            <label class="col-md-12">Kullanıcı İlçe </label>
+            <div class="col-md-12">
+                <input id="kullaniciIlce" type="text" class="form-control" placeholder="Kullanıcı İlçe Giriniz">
+            </div>
+        </div>*@
+    <div class="form-group">
+        <label class="col-md-12">Kullanıcı Yetki</label>
+        <div class="col-md-12">
+            <input id="kullaniciYetki" type="text" class="form-control" placeholder="Kullanıcı Yetkisi Giriniz">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Kullanıcı Oy Durumu</label>
+        <div class="col-md-12">
+            <input id="kullaniciOy" type="text" class="form-control" placeholder="Kullanıcı Oy Durumu Giriniz">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Kullanıcı Şifre</label>
+        <div class="col-md-12">
+            <input id="kullaniciSifre" type="text" class="form-control" placeholder="Kullanıcı Şifreyi Giriniz">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Kullanıcı Giriş Adı</label>
+        <div class="col-md-12">
+            <input id="kullaniciGirisAdi" type="text" class="form-control" placeholder="Kullanıcı Giriş Adını Giriniz">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12">
+            <button id="kullaniciKaydet" class="btn btn-block btn-info">Kaydet</button>
+            @*<input type="button" id="kullaniciKaydet" class="btn btn-block btn-info" value="Kaydet" />*@
+        </div>
+
+    </div>
+</form>

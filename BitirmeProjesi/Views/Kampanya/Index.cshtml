@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Kampanyalar";
+}
+@using BitirmeProjesi.Data.UnitOfWork;
+@model List<BitirmeProjesi.Data.Model.Kampanya>
+
+<h2>KAMPANYALAR</h2>
+
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Kampanya Id</th>
+            <th>Kampanya Aday</th>
+            <th>Kampanya Başlık</th>
+            <th>Kampanya Metni</th>
+            @*<th>Güncelle</th>
+            <th>Sil</th>*@
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kampanya in Model)
+        {
+            <tr>
+                <td>@kampanya.KampanyaId</td>
+                <td>@kampanya.KampanyaAday</td>
+                <td>@kampanya.KampanyaBaslik</td>
+                <td>@kampanya.KampanyaMetni</td>
+                @*<td><a href="@Url.Action("Guncelle", "Kampanya", new { kampanyaId = kampanya.KampanyaId})" class="guncelle btn btn-custom">Güncelle</a></td>
+                <td><button class="kullanicisil btn btn-danger" value="@kampanya.KampanyaId">Sil</button></td>*@
+            </tr>
+        }
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Kampanya Id</th>
+            <th>Kampanya Aday</th>
+            <th>Kampanya Başlık</th>
+            <td>Kampanya Metni</td>
+            @*<th>Güncelle</th>
+            <th>Sil</th>*@
+        </tr>
+    </tfoot>
+</table>
+
+

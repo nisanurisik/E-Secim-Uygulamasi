@@ -1,20 +1,54 @@
-<h1>E-Seçim Uygulaması</h1>
+# E-Seçim
 
-Bu uygulama ASP.NET MVC ve MSSQL veritabanı kullanılarak geliştirildi.
+E-Seçim, elektronik seçim süreçlerini yönetmek için tasarlanmış kapsamlı bir web uygulamasıdır. Seçim yönetiminden oy kullanma ve sonuç takibine kadar tüm süreçleri kolaylaştırmayı hedefler.
 
-Projede yönetici, seçmen ve aday olarak 3 farklı kullanıcı bulunmaktadır.
+## Projenin Amacı
+Bu proje, elektronik seçim süreçlerini modern ve kullanıcı dostu bir arayüzle dijitalleştirerek aşağıdaki alanlarda hizmet sunar:
+- **Seçim Yönetimi**: Seçim oluşturma ve süreçlerin takibi
+- **Aday Yönetimi**: Aday ekleme, düzenleme ve listeleme
+- **Kullanıcı (Seçmen) Yönetimi**: Seçmenlerin kaydı ve doğrulama işlemleri
+- **Oy Kullanma Sistemi**: Güvenli ve şeffaf bir şekilde oy kullanma
+- **Seçim Sonuçlarının Takibi**: Anlık seçim sonuçları raporlaması
 
-Kullanıcıların bilgileri veritabanında tutulmaktadır ve giriş ekranında bu bilgiler kontrol edilerek giriş sağlanmaktadır.
+## Kullanılan Teknolojiler
+- **Framework ve Programlama Dili**:
+  - ASP.NET MVC Framework
+  - C# Programlama Dili
+- **Veritabanı ve ORM**:
+  - Entity Framework
+  - SQL Server
+- **Mimari ve Tasarım**:
+  - Generic Repository Pattern (Tekrarlanan kodların önlenmesi)
+  - Unit of Work Pattern (Transaction yönetimi)
+  - DbContext Yaşam Döngüsü Yönetimi
+  - Lazy Loading (İlişkisel verilerin gerektiğinde yüklenmesi)
 
-Giriş yapan kullanıcıların yetki durumları vardır. Bu yetki durumları sayesinde tüm sayfaları görüntüleyemezler ve her işlemi yapamazlar.
+## Temel Özellikler
 
-Seçmenler; aday listeleme, kampanya listeleme ve oy kullanma yetkilerine sahiptirler.
+### Seçim Yönetimi
+- Yeni seçim oluşturma
+- Seçim bilgilerini güncelleme
+- Seçim süreci takibi
 
-Adaylar; kampanya ekleme, aday listeleme, kampanya listeleme ve oy kullanma yetkilerine sahiptirler.
+### Aday Yönetimi
+- Aday ekleme, düzenleme ve silme
+- Aday listesi görüntüleme
 
-Yöneticiler; seçim ekleme, kullanıcı ekleme, aday ekleme,  aday listeleme, kampanya listeleme ve oy kullanma yetkilerine sahiptirler.
+### Kullanıcı Yönetimi
+- Seçmen kaydı
+- Kullanıcı giriş ve doğrulama sistemi
 
-Kullanıcıların veritabanında oy durumlarını tutan bir değer vardır. İlk başta bu değer sıfır iken oy kullanınca bu değer bir olmaktadır.
+### Oy Kullanma Sistemi
+- Oy kullanma ekranı
+- Kullanıcı doğrulama ve seçim güvenliği
 
+### Seçim Sonuçları
+- Seçim sonuçlarının anlık takibi
+- Raporlama ve analiz özellikleri
 
+## Güçlü Yönler
+- **Generic Repository Pattern**: Tekrarlanan kod önlenerek temiz ve sürdürülebilir kod yapısı sağlanmıştır.
+- **Unit of Work Pattern**: Transaction yönetimi optimize edilmiştir.
+- **Lazy Loading**: Performans artışı sağlanmıştır, ilişkisel veriler gerektiğinde yüklenir.
+- **DbContext Yönetimi**: Veritabanı işlemleri için yaşam döngüsü kontrolü yapılmıştır.
 
